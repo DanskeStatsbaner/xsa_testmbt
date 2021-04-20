@@ -1,0 +1,19 @@
+ID: XSA_TestMBT
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: XSA_TESTMBT-db
+   type: hdb
+   path: db
+   requires:
+    - name: XSA_TESTMBT-container
+
+resources:
+ - name: XSA_TESTMBT-container
+   parameters:
+      config:
+         schema: XSA_TESTMBT
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
