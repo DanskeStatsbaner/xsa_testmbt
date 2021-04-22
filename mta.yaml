@@ -2,10 +2,6 @@ ID: XSA_TestMBT
 _schema-version: '2.1'
 version: 0.0.1
 
-build-parameters:
-  before-all:
-    - builder: npm
-
 modules:
  - name: XSA_TESTMBT-db
    type: hdb
